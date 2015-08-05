@@ -1,4 +1,4 @@
-package com.grailsinaction
+package com.Task
 class User {
      String userId
      String password
@@ -6,11 +6,10 @@ class User {
      Date dateCreated
 
 
-Profile profile
-
-profile(nullable: true)
-
-static mapping = {
-     profile lazy:false
-
-static hasMany = [ posts : Post, tags : Tag, following : User ]}
+	Profile profile
+	static mapping = {
+    	profile lazy:false
+ 	}
+ 	static constraints = {	profile nullable:true}
+	static hasMany = [ posts : Post, tags : Tag, following : User ]
+}
